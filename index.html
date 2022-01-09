@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Конвертер валют!</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <section class="converter">
+      <div class="container">
+        <div class="converter__wrapper">
+          <div
+            class="converter__switcher converter-switcher"
+            id="converter-switcher-1"
+          >
+            <button
+              class="converter-switcher__item converter-switcher__item--bb"
+              id="RUB"
+            >
+              RUB
+            </button>
+            <button
+              class="converter-switcher__item converter-switcher__item--bb converter-switcher__item--active"
+              id="USD"
+            >
+              USD
+            </button>
+            <button
+              class="converter-switcher__item converter-switcher__item--bb"
+              id="EUR"
+            >
+              EUR
+            </button>
+          </div>
+          <!-- /.converter__switcher converter-switcher -->
+          <div
+            class="converter-switcher__input-box converter-switcher__input-box--bb"
+          >
+            <input
+              type="text"
+              name="input-currency"
+              id="input-currency"
+              class="converter-switcher__input"
+              placeholder="У меня есть"
+            />
+          </div>
+          <!-- /.converter-switcher__input-box -->
+          <div class="converter-switcher__input-box">
+            <input
+              type="text"
+              name="output-currency"
+              id="output-currency"
+              class="converter-switcher__input"
+              placeholder="Я получу"
+              readonly
+            />
+          </div>
+          <!-- /.converter-switcher__input-box -->
+          <div
+            class="converter__switcher converter-switcher"
+            id="converter-switcher-2"
+          >
+            <button
+              class="converter-switcher__item converter-switcher__item--bt converter-switcher__item--active"
+              id="RUB"
+            >
+              RUB
+            </button>
+            <button
+              class="converter-switcher__item converter-switcher__item--bt"
+              id="USD"
+            >
+              USD
+            </button>
+            <button
+              class="converter-switcher__item converter-switcher__item--bt"
+              id="EUR"
+            >
+              EUR
+            </button>
+          </div>
+        </div>
+        <!-- /.converter__wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.converter -->
+  </body>
 </html>
