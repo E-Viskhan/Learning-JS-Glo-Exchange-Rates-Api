@@ -5,8 +5,7 @@ const inputElem = document.getElementById('input-currency');
 const outputElem = document.getElementById('output-currency');
 const baseCurrency = 'EUR';
 
-let inputCurrency = 'USD', outputCurrency = 'RUB';
-let rates;
+let rates, inputCurrency = 'USD', outputCurrency = 'RUB';
 
 const getRatesFromApi = async () => {
   const getApiUrl = () => {
@@ -23,9 +22,8 @@ const getRatesFromApi = async () => {
       rates = json.rates;
       rates[json.base] = 1;
     })
-    .catch(err => console.log(new Error('Ошибка при получении актуальных курсов валют.')));
+    .catch(() => console.log(new Error('Ошибка при получении актуальных курсов валют.')));
 };
-
 
 const calcResult = () => {
   const isInputValid = () => {
